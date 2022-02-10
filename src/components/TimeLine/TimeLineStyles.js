@@ -1,6 +1,17 @@
 
 import styled from 'styled-components'
 
+export const CarouselWrapper = styled.div`
+  max-width: "100%";
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+
+  @media ${props => props.theme.breakpoints.sm} {
+    max-width: "70%";
+  }
+`
+
 export const CarouselContainer = styled.ul`
   max-width: 1040px;
   background: #0F1624;

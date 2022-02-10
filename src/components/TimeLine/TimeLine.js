@@ -1,5 +1,5 @@
 import React from 'react';
-import { CarouselItemText, CarouselItemTitle, Box } from './TimeLineStyles';
+import { CarouselItemText, CarouselItemTitle, Box, CarouselWrapper } from './TimeLineStyles';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { TimeLineData } from '../../constants/constants';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -15,7 +15,7 @@ const Timeline = () => {
       <SectionText>
         I have had some amazing experiences during my internships which have helped me become the person I am today and hone my skills. Here are a few of them listed out:
       </SectionText>
-      <div style={{maxWidth: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+      <CarouselWrapper>
         <Carousel dynamicHeight swipeable autoPlay interval={6000} showThumbs={false}>
           {TimeLineData.map((item, i) => (
             <Box key={i}>
@@ -31,7 +31,7 @@ const Timeline = () => {
             </Box>
           ))}
         </Carousel>
-      </div>
+      </CarouselWrapper>
     </Section>
   );
 };

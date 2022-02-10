@@ -44,6 +44,9 @@ export const GithubCard = styled.div`
   min-height: 30vh;
   height: 100%;
   width: 100%;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    min-height: auto;
+  }
 `
 
 export const Card = (props) => (
