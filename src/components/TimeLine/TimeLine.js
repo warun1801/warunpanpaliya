@@ -16,7 +16,7 @@ const Timeline = () => {
         I have had some amazing experiences during my internships which have helped me become the person I am today and hone my skills. Here are a few of them listed out:
       </SectionText>
       <div style={{maxWidth: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-        <Carousel dynamicHeight swipeable autoPlay interval={6000}>
+        <Carousel dynamicHeight swipeable autoPlay interval={6000} showThumbs={false}>
           {TimeLineData.map((item, i) => (
             <Box key={i}>
               <CarouselItemTitle style={{fontSize: "17px", marginBottom: "0px", color:"#999"}}>{item.duration}</CarouselItemTitle>
